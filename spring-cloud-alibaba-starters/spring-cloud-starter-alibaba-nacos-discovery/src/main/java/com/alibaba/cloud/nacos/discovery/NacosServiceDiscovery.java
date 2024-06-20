@@ -104,6 +104,8 @@ public class NacosServiceDiscovery {
 			metadata.putAll(instance.getMetadata());
 		}
 		metadata.put("nacos.ephemeral", String.valueOf(instance.isEphemeral()));
+		metadata.put("nacos.enabled", String.valueOf(instance.isEnabled()));
+		
 		nacosServiceInstance.setMetadata(metadata);
 
 		if (metadata.containsKey("secure")) {
